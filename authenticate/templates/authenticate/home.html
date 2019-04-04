@@ -1,0 +1,134 @@
+{% extends 'authenticate/base.html' %}
+
+{% block content %}
+
+<style>
+#pp{
+		font-size: 40px;
+		font-family: Futura Md BT Medium;
+
+	}
+
+.song_name{
+	font-weight: lighter;
+	color: grey;
+	text-align: center;
+
+}
+.playlist{
+	font-family: century gothic;
+	font-weight: 200;
+	color: white;
+	font-size: 40px;
+	border: 1px solid #6bb1ff;
+	background: #6bb1ff;
+	display: inline;
+	border-radius: 10px 10px 0px 0px;
+	box-shadow: 6px 3px #b7f2ff	;
+}
+
+.line{
+	height: 2px;
+	background: #b7f2ff;
+}
+</style>
+<div class="container">
+{% if user.is_authenticated %}
+
+
+ 	<div class="row">
+ 		<div class="col-sm-1"></div>
+ 		<div class="col-sm-10">
+ 			 <p id="pp">Profile: {{user.first_name}} {{user.last_name}}</p>
+ 			<img class="img-fluid mb-5" src="http://images6.fanpop.com/image/photos/40200000/Music-Wallpaper-random-40202285-1297-691.jpg">
+ 			
+ 		</div>
+ 		<div class="col-sm-1"></div>
+
+ 	</div>
+
+ <div class="row">
+<div class="col-sm-1"></div>
+<div class="col-sm-10">
+ <h2 class="playlist">Playlist</h2>
+ <hr class="my-0 line" />
+
+<div class="row">
+	<div class="col-sm-4 mt-5">
+	<img width="300px" height="auto" src="https://chandigarhbytes.com/wp-content/uploads/2017/03/music.jpg">
+	<audio controls>
+  <source src="https://freemusicdownloads.world/wp-content/uploads/2017/07/Numb20Official20Video20-20Linkin20Park-kXYiU_JCYtU.mp3"
+   type="audio/mpeg">
+  </audio>
+  <h4 class="song_name">NUMB</h4>
+</div>
+
+
+
+
+
+  	<div class="col-sm-4 mt-5">
+  		<img width="300px" height="auto"  src="https://chandigarhbytes.com/wp-content/uploads/2017/03/music.jpg">
+  	<audio controls>
+  <source src="https://freemusicdownloads.world/wp-content/uploads/2017/07/Crawling20Official20Video20-20Linkin20Park-Gd9OhYroLN0.mp3" type="audio/mpeg">
+  </audio>
+  <h4 class="song_name">CRAWLING</h4>
+</div>
+
+
+
+
+
+<div class="col-sm-4 mt-5">
+  	<img width="300px" height="auto"  src="https://chandigarhbytes.com/wp-content/uploads/2017/03/music.jpg">
+  	<audio controls>
+  <source src="https://freemusicdownloads.world/wp-content/uploads/2017/07/Castle20of20Glass20Official20Video20-20Linkin20Park-ScNNfyq3d_w.mp3" type="audio/mpeg">
+  </audio>
+  	<h4 class="song_name">CASTLE OF GLASS</h4>
+  </div>
+
+
+<div class="col-sm-4 mt-5">
+  	<img width="300px" height="auto"  src="https://chandigarhbytes.com/wp-content/uploads/2017/03/music.jpg">
+  	<audio controls>
+  <source src="https://freemusicdownloads.world/wp-content/uploads/2017/07/New20Divide20Official20Video20-20Linkin20Park-ysSxxIqKNN0.mp3" type="audio/mpeg">
+  </audio>
+  	<h4 class="song_name">NEW DIVIDE</h4>
+  </div>
+
+  <div class="col-sm-4 mt-5">
+  	<img width="300px" height="auto"  src="https://chandigarhbytes.com/wp-content/uploads/2017/03/music.jpg">
+  	<audio controls>
+  <source src="https://freemusicdownloads.world/wp-content/uploads/2017/07/Somewhere20I20Belong20Official20Video20-20Linkin20Park-zsCD5XCu6CM.mp3" type="audio/mpeg">
+  </audio>
+  	<h4 class="song_name">SOMEWHERE I BELONG</h4>
+  </div>
+
+
+
+
+  
+
+
+<div class="col-sm-4 mt-5">
+	<img width="300px" height="auto"  src="https://chandigarhbytes.com/wp-content/uploads/2017/03/music.jpg">
+  	<audio controls>
+  <source src="https://freemusicdownloads.world/wp-content/uploads/2017/07/New20Divide20Official20Video20-20Linkin20Park-ysSxxIqKNN0.mp3" type="audio/mpeg">
+  </audio>
+  <h4 class="song_name">NEW DIVIDE</h4>
+</div>
+
+
+
+</div>
+	
+
+</div>
+<div class="col-sm-1"></div>
+</div>
+
+
+{% endif %}
+</div>
+
+{% endblock %}
